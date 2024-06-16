@@ -1,0 +1,531 @@
+html{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --main-color: #00abf0; /* Definir el color principal */
+    --bg-color:#081b29; /*color de fondo letras*/
+    --second-bg-color:#112e42;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background: var(--bg-color);
+    
+}
+
+section{
+    padding: 10px 100px 10px 100px;
+}
+
+
+button{
+    position: relative;
+    display: inline-flex;
+    justify-content: center; 
+    align-items: center; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 100%;
+    background: var(--main-color);
+    border: 3px solid var(--main-color);
+    border-radius: 15px;
+    font-size: 28.8px; 
+    font-weight: 600; 
+    letter-spacing: 1px;
+    color: var(--bg-color);
+    z-index: 1; 
+    overflow: hidden; 
+    transition: .5s;
+}
+
+
+/*Menu navegacion*/
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    z-index: 1000;
+    padding: 10px 100px;
+}
+
+#nav-inicio{
+    list-style: none;
+    margin-top: 50px;
+    margin-right: 200px;
+}
+
+#nav-inicio li{
+    float: left;
+    margin-right: 30px;
+}
+
+#logo-nav{
+    font-size: 35px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+a:any-link{
+    color: white;
+}
+
+a:-webkit-any-link{
+    color: white;
+}
+
+a:-moz-any-link{  
+    color:white;
+}
+
+a{
+    text-decoration: none;
+    transition: .3s;
+}
+
+a:hover{
+    color: var(--main-color);
+}
+
+
+/*Seccion inicio*/
+.inicio{
+    display: grid;
+    grid-template-columns: 1fr 1000px;
+    padding-top: 300px;
+    padding-bottom: 200px;
+
+}
+
+
+#texto-izquierda h1{
+    font-size: 68.8px;
+    margin-bottom: -35px;
+}
+
+#texto-estilo{
+    font-size: 44.8px;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: .7px var(--main-color);
+}
+
+/*Botones inicio*/
+
+.boton-inicio {
+    position: relative;
+}
+
+.boton-inicio a {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.boton-inicio button {
+    position: relative;
+    z-index: 1;
+}
+
+.boton-inicio button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.boton-inicio button:hover::before {
+    width: 100%;
+}
+
+.boton-inicio button:hover {
+    color: var(--main-color);
+}
+
+.boton-inicio .sobre-mi-btn {
+    background-color: transparent;
+    color: var(--main-color);
+}
+
+.boton-inicio .sobre-mi-btn:hover {
+    color: var(--bg-color);
+}
+
+.boton-inicio .sobre-mi-btn::before {
+    background: var(--main-color);
+}
+
+
+
+/*Seccion Sobre mi*/
+
+.sobremi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--second-bg-color);
+    padding-bottom: 6rem;
+}
+
+.sobremi h2 {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+}
+
+.sobremi img{
+    position: relative;
+    width: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.sobremi-contenido{
+    text-align: center;
+}
+
+.sobremi-contenido p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+
+}
+
+#texto-sobremi{
+    color: var(--main-color);
+}
+
+/*Boton Sobre mi*/
+
+.boton-sobremi button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.boton-sobremi button:hover::before{
+    width: 100%;
+
+}
+
+.boton-sobremi button:hover{
+    color: var(--main-color);
+}
+ 
+/*Seccion Estudios y experiencias*/
+
+.estudios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 6rem;
+}
+
+#texto-experiencias{
+    color: var(--main-color);
+}
+
+.estudios h2{
+    justify-content: center;
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+}
+
+.estudios span{
+    color: var(--main-color);
+}
+
+.estudios h3{
+    font-size: 30px;
+}
+
+/*Tablas de estudios y experiencias*/
+
+.contenido-estudiosyexperiencias{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30rem;
+    justify-content: center;
+}  
+
+.contenido-educacion {
+    grid-column: 1;
+    text-align: left;
+    border-left: 2px solid var(--main-color);
+    padding-left: 2rem;
+   
+}
+
+.contenido-experiencias{
+    grid-column: 2;
+    text-align: left;
+    border-left: 2px solid var(--main-color);
+    padding-left: 2rem;
+}
+
+.contenido{
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+}
+
+.contenido::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -52px;
+    width: 2rem;
+    height: 2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+
+}
+
+.contenido h4{
+    font-size: 25px;
+}
+
+
+/*Seccion Skills*/
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 6rem;
+    background: var(--second-bg-color);
+}
+
+.skills h2{
+    font-size: 5rem;
+}
+
+#texto-skills{
+    color: var(--main-color);
+}
+
+
+
+/*Tablas skills*/
+
+.contenido-skills{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30rem;
+    justify-content: center;
+    
+}
+
+.tabla .progreso span{
+    color: var(--main-color);
+}
+
+
+.columna-skills{
+    flex: 1 1 40rem;
+}
+
+.contenido-skills .titulo{
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+}
+
+.tabla{
+    position: relative;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    padding: .5rem 1.5rem;
+}
+
+.progreso{
+    padding: 1rem 0;
+}
+
+.progreso h3{
+   font-size: 1.7rem;
+   display: flex; 
+   justify-content: space-between;
+
+}
+
+.progreso h3 span{
+    color: white; 
+    margin-left: 25px;
+}
+
+.progreso .barra{
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+    padding: 13px;
+    margin: 1rem 0;
+}
+
+ .progreso  .barra span{
+    display: block;
+    height: 100%;
+    border-radius: .3rem;
+    background: var(--main-color);
+}
+
+
+
+.columna:nth-child(1) .progreso:nth-child(1) .barra span{
+    width: 90%;
+}
+
+
+
+/*Sección Contactar*/
+
+.contacto{
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+
+.contacto form{
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.contacto form .input{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+}
+
+.contacto form .input-area{
+    width: calc(50% - 0.5rem);
+    margin: .8rem 0;
+    box-sizing: border-box;
+}
+
+.contacto form .input-area input,
+.contacto form .area-texto textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: white;
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+    box-sizing: border-box;
+}
+
+.contacto form .area-texto {
+    width: 100%;
+    margin: .8rem 0;
+}
+
+.contacto form .botones {
+    margin-top: 1.5rem;
+}
+
+
+.contacto h2{
+    justify-content: center;
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+}
+
+.contacto span{
+    color: var(--main-color);
+}
+
+
+
+
+/*Boton enviar*/
+
+.contacto .botones button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.contacto .botones button:hover::before{
+    width: 100%;
+
+}
+
+.contacto .botones button:hover{
+    color: var(--main-color);
+}
+
+/*footer*/
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 9%;
+    background: var(--second-bg-color);
+}
+
+.footer p{
+    font-size: 20px;
+}
+
+ .icono-footer a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+}
+
+
+
+.icono-footer a i{
+    font-size: 1.5rem;
+    color: var(--bg-color);
+}
+
+.icono-footer a:hover i{
+   color: var(--main-color); 
+}
