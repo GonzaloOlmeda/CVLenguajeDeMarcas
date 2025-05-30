@@ -68,6 +68,10 @@ nav{
     margin-right: 200px;
 }
 
+.inicio img{
+    animation: flotar 2s ease-in-out infinite;
+}
+
 #nav-inicio li{
     float: left;
     margin-right: 30px;
@@ -192,14 +196,14 @@ a:hover{
     margin-bottom: 3rem;
 }
 
-.sobremi img{
+.sobremi img {
     position: relative;
     width: 25rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    animation: flotar 3s ease-in-out infinite;
 }
 
 .sobremi-contenido{
@@ -529,3 +533,17 @@ a:hover{
 .icono-footer a:hover i{
    color: var(--main-color); 
 }
+
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
